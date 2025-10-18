@@ -1,39 +1,62 @@
-#  Loja Online em PHP
+# 🛒 Loja Online Laravel
 
-Este projeto é uma aplicação simples de loja online desenvolvida com **PHP**, **HTML** e **CSS**, como parte dos estudos da pós-graduação em Full Stack. Ele simula uma vitrine de produtos com exibição dinâmica e estrutura modular.
+Este é um projeto de uma loja online desenvolvido com o framework **Laravel**, como parte dos estudos da disciplina de Linguagem PHP no curso de Pós-Graduação Full Stack.
 
 ##  Funcionalidades
 
-- Exibição de produtos em tabela
-- Separação de lógica PHP e visual HTML
-- Estilização com CSS
-- Preparado para expansão com banco de dados
+- Listagem de produtos com busca
+- Adição de novos produtos
+- Edição de produtos existentes
+- Autenticação simples com login
+- Área administrativa protegida
+- Estilização com CSS customizado
 
-##  Estrutura de arquivos
-loja-online/ 
-├── index.php         
-# Página principal ├── produtos.php      # Dados dos produtos ├── estilo.css        # Estilos da tabela
+##  Credenciais de acesso
+
+Para acessar a área administrativa:
+
+- **Usuário:** `admin`
+- **Senha:** `123`
+
+##  Estrutura de diretórios
+app/ 
+├── Http/ │   └── Controllers/ │       
+    ├── ProdutoController.php │       
+    └── LoginController.php 
+
+resources/ 
+    ├── views/ │   
+        ├── produtos/ 
+            ├── index.blade.php 
+            ├── create.blade.php │  
+            └── edit.blade.php │   
+        ├── login.blade.php │   
+        └── admin.blade.php 
+        
+public/ 
+    ├── css/   
+        └── styles.css routes/ 
+        
+└── web.php
 
 
-##  Como rodar localmente
+##  Como rodar o projeto
 
-### Usando o servidor embutido do PHP:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
 
-```bash
-php -S localhost:8000 -t loja-online
+2. Instale as dependências:
+    ```bash
+    composer install
 
-Depois, acesse no navegador:
-http://localhost:8000/index.php
+3. Inicie o servidor:
+    ```bash
+    php artisan serve
 
-Ou usando XAMPP:
-- Copie a pasta loja-online para C:\xampp\htdocs
-- Inicie o Apache pelo XAMPP
-- Acesse:
-http://localhost/loja-online/index.php
+4. Acesse o navegador:
+    ```bash
+    http://localhost:8000
 
-Tecnologias utilizadas
-- PHP 8.x
-- HTML5
-- CSS3
-- VS Code
+
 
