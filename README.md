@@ -1,39 +1,56 @@
-#  Loja Online em PHP
+# 🛍️ Loja Online Laravel
 
-Este projeto é uma aplicação simples de loja online desenvolvida com **PHP**, **HTML** e **CSS**, como parte dos estudos da pós-graduação em Full Stack. Ele simula uma vitrine de produtos com exibição dinâmica e estrutura modular.
+Este é um projeto de loja online desenvolvido com **Laravel 12** e **PHP 8.2**.
+=======
 
 ##  Funcionalidades
 
-- Exibição de produtos em tabela
-- Separação de lógica PHP e visual HTML
-- Estilização com CSS
-- Preparado para expansão com banco de dados
+- Listagem de produtos com busca
+<<<<<<< HEAD
+- Cadastro de novos produtos
+- Edição e exclusão de produtos
+- Validação de dados nos formulários
+- Interface simples com Blade
+- Banco de dados MySQL com migrations e seeders
+- Autenticação básica de administrador
 
-##  Estrutura de arquivos
-loja-online/ 
-├── index.php         
-# Página principal ├── produtos.php      # Dados dos produtos ├── estilo.css        # Estilos da tabela
+##  Tecnologias utilizadas
 
+- Laravel 12.34
+- PHP 8.2
+- MySQL (via XAMPP)
+- Blade (templating)
+- HTML/CSS
+- Git + GitHub
 
-##  Como rodar localmente
+##  Como rodar o projeto
 
-### Usando o servidor embutido do PHP:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/loja-online-laravel.git
+   cd loja-online-laravel
 
-```bash
-php -S localhost:8000 -t loja-online
+2. Instale as dependências:
+    ```bash
+    composer install
 
-Depois, acesse no navegador:
-http://localhost:8000/index.php
+3. - Configure o .env:
+- Crie o arquivo .env com base no .env.example
+- Defina o DB_DATABASE, DB_USERNAME, DB_PASSWORD
+- Gere a chave:
 
-Ou usando XAMPP:
-- Copie a pasta loja-online para C:\xampp\htdocs
-- Inicie o Apache pelo XAMPP
-- Acesse:
-http://localhost/loja-online/index.php
+    ```bash
+    php artisan key:generate
 
-Tecnologias utilizadas
-- PHP 8.x
-- HTML5
-- CSS3
-- VS Code
+4. Rode as migrations e seeders:
+    ```bash
+    php artisan migrate
+    php artisan db:seed
+
+5. Inicie o servidor:
+    ```bash
+    php artisan serve
+
+6. Acesse o navegador:
+http://localhost:8000/produtos
 
